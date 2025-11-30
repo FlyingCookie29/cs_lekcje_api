@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WFD.Logic\WFD.Logic.csproj" />
     <ProjectReference Include="..\WFD.Model\WFD.Model.csproj" />
   </ItemGroup>
 

@@ -1,0 +1,19 @@
+﻿using WFD.Logic.Interfaces;
+using WFD.Model.Model;
+using WFD.Repository;
+
+namespace WFD.Logic
+{
+    public class FoodLogic : IFoodLogic
+    {
+
+        public List<Dish> GetAllDishes()
+        {
+            return WFDContext.Dishes;
+        }
+        public void AddNewDish(Dish dish)
+        {
+            WFDContext.Dishes.Add(dish);
+        }
+    }
+}

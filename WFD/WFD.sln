@@ -5,7 +5,11 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WFD.API", "WFD.API\WFD.API.csproj", "{A8E20798-F910-45C3-A4F7-BB5430B8BA4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFD.Model", "WFD.Model\WFD.Model.csproj", "{AB3267B9-164A-40A0-8C3A-1FCCA1007845}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WFD.Model", "WFD.Model\WFD.Model.csproj", "{AB3267B9-164A-40A0-8C3A-1FCCA1007845}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFD.Repository", "WFD.Repository\WFD.Repository.csproj", "{C015D32F-DEA8-4C12-AECF-2CA93FB2CCA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFD.Logic", "WFD.Logic\WFD.Logic.csproj", "{229741F7-9F41-4AB4-AE95-E773303BD222}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{AB3267B9-164A-40A0-8C3A-1FCCA1007845}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB3267B9-164A-40A0-8C3A-1FCCA1007845}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB3267B9-164A-40A0-8C3A-1FCCA1007845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C015D32F-DEA8-4C12-AECF-2CA93FB2CCA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C015D32F-DEA8-4C12-AECF-2CA93FB2CCA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C015D32F-DEA8-4C12-AECF-2CA93FB2CCA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C015D32F-DEA8-4C12-AECF-2CA93FB2CCA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{229741F7-9F41-4AB4-AE95-E773303BD222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{229741F7-9F41-4AB4-AE95-E773303BD222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{229741F7-9F41-4AB4-AE95-E773303BD222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{229741F7-9F41-4AB4-AE95-E773303BD222}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
