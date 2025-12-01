@@ -9,7 +9,7 @@
         /// </summary>
         public int ExpectedPreparationTime { get; set; }
         public List<Ingredient> Ingredients { get; set; }
-        public List<string> Tags { get; set; }
+        //public List<string> Tags { get; set; }
         public string ExtraNotes { get; set; }
         public string Description { get; set; }
     }

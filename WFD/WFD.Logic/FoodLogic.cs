@@ -9,11 +9,11 @@ namespace WFD.Logic
 
         public List<Dish> GetAllDishes()
         {
-            return WFDContext.Dishes;
+            return null;
         }
         public void AddNewDish(Dish dish)
         {
-            WFDContext.Dishes.Add(dish);
+            
         }
     }
 }

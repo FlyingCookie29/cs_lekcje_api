@@ -1,11 +1,16 @@
-﻿using WFD.Model.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using WFD.Model.Model;
 
 namespace WFD.Repository
-{
-    public static class WFDContext
-    {
-        public static List<Dish> Dishes { get; set; } = new List<Dish>();
-        public static List<Ingredient> Ingredients { get; set; } = new List<Ingredient>();
+{    
+        public class WFDContext : DbContext
+        {
+            public WFDContext(DbContextOptions<WFDContext> options) : base(options)
+            { }
+            
+            public DbSet<Dish> Dishes { get; set; }
+            public DbSet<Ingredient> Ingredients { get; set; }
 
-    }
+            
+        }
 }

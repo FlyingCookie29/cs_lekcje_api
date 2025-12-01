@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using WFD.Repository;
 
 namespace WFD.API
 {
@@ -6,6 +8,9 @@ namespace WFD.API
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<WFDContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // Add services to the container.
             builder.Services.AddControllers();
