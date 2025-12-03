@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WFD.Repository;
 
@@ -11,9 +12,11 @@ using WFD.Repository;
 namespace WFD.Repository.Migrations
 {
     [DbContext(typeof(WFDContext))]
-    partial class WFDContextModelSnapshot : ModelSnapshot
+    [Migration("20251203185726_Tag")]
+    partial class Tag
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,12 +48,7 @@ namespace WFD.Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Dishes");
                 });
@@ -88,43 +86,6 @@ namespace WFD.Repository.Migrations
                     b.ToTable("Ingredients");
                 });
 
-            modelBuilder.Entity("WFD.Model.BaseModel.User", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Login")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Surname")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("WFD.Model.BaseModel.Dish", b =>
-                {
-                    b.HasOne("WFD.Model.BaseModel.User", null)
-                        .WithMany("FavoriteDishes")
-                        .HasForeignKey("UserId");
-                });
-
-            modelBuilder.Entity("WFD.Model.BaseModel.Ingredient", b =>
             modelBuilder.Entity("WFD.Model.BaseModel.Tag", b =>
                 {
                     b.Property<int>("Id")
@@ -154,7 +115,6 @@ namespace WFD.Repository.Migrations
                         .HasForeignKey("DishId");
                 });
 
-            modelBuilder.Entity("WFD.Model.BaseModel.Dish", b =>
             modelBuilder.Entity("WFD.Model.BaseModel.Tag", b =>
                 {
                     b.HasOne("WFD.Model.BaseModel.Dish", null)
@@ -167,11 +127,6 @@ namespace WFD.Repository.Migrations
                     b.Navigation("Ingredients");
 
                     b.Navigation("Tags");
-                });
-
-            modelBuilder.Entity("WFD.Model.BaseModel.User", b =>
-                {
-                    b.Navigation("FavoriteDishes");
                 });
 #pragma warning restore 612, 618
         }
