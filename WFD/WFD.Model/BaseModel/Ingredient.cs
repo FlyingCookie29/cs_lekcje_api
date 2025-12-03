@@ -9,5 +9,4 @@
         //public List<string> Tags { get; set; }
         public string ExtraNotes { get; set; }
     }
-
 }
