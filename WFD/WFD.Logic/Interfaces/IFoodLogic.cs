@@ -1,4 +1,4 @@
-﻿using WFD.Model.Model;
+﻿using WFD.Model.BaseModel;
 
 namespace WFD.Logic.Interfaces
 {

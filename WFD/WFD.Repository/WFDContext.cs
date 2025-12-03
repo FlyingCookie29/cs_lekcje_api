@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WFD.Model.Model;
+using WFD.Model.BaseModel;
 
 namespace WFD.Repository
 {    

@@ -1,4 +1,4 @@
-﻿namespace WFD.Model.Model
+﻿namespace WFD.Model.BaseModel
 {
     public class Ingredient
     {

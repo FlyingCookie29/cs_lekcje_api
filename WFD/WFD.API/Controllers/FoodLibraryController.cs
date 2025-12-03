@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WFD.Logic;
-using WFD.Model.Model;
+using WFD.Model.BaseModel;
 
 namespace WFD.API.Controllers
 {

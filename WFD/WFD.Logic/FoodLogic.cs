@@ -1,5 +1,5 @@
 ﻿using WFD.Logic.Interfaces;
-using WFD.Model.Model;
+using WFD.Model.BaseModel;
 using WFD.Repository;
 
 namespace WFD.Logic
