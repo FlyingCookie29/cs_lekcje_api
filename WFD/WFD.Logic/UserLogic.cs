@@ -39,7 +39,6 @@ namespace WFD.Logic
                 return false;
             }
         }
-
         public void AddFavoriteDish(int id, Dish dish)
         {
             var user = _context.Users.FirstOrDefault(u => u.Id == id);

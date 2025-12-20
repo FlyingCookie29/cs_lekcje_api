@@ -11,9 +11,9 @@ namespace WFD.API.Controllers
     {
         private UserLogic _userLogic;
 
-        public UserController(WFDContext context)
+        public UserController(UserLogic u)
         {
-            _userLogic = new UserLogic(context);
+            _userLogic = u;
         }
 
         [HttpPost("AddUser")]

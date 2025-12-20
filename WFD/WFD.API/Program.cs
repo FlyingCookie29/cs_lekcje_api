@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using WFD.Logic;
 using WFD.Repository;
 
 namespace WFD.API
@@ -11,9 +12,31 @@ namespace WFD.API
 
             builder.Services.AddDbContext<WFDContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddControllers();
 
             // Add services to the container.
-            builder.Services.AddControllers();
+            //=============
+
+            //builder.Services.AddScoped - tworzy coœ i przechowóje to przez chwilê
+            //builder.Services.AddTransient - tworzy coœ i nie przechowóje
+            //builder.Services.AddSingleton - tworzy 1 i trzyma go stale 
+
+
+            builder.Services.AddScoped<Pesel>();
+            builder.Services.AddScoped<Cz³owiek>();
+            builder.Services.AddScoped<Student>();
+            builder.Services.AddScoped<Robotnik>();
+            builder.Services.AddSingleton<Uczelnia>();
+
+
+            builder.Services.AddScoped<UserLogic>();
+
+
+
+
+
+            //=============
+
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
