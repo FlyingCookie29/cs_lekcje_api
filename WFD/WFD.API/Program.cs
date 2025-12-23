@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WFD.Logic;
+using WFD.Logic.Interfaces;
 using WFD.Repository;
 
 namespace WFD.API
@@ -30,6 +31,8 @@ namespace WFD.API
 
 
             builder.Services.AddScoped<UserLogic>();
+
+            builder.Services.AddScoped<IFoodLogic,FoodLogic>();
 
 
 

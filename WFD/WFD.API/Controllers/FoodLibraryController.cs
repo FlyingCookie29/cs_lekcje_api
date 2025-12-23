@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WFD.Logic;
+using WFD.Logic.Interfaces;
 using WFD.Model.BaseModel;
 using WFD.Repository;
 
@@ -9,14 +10,12 @@ namespace WFD.API.Controllers
     [Route("Food")]
     public class FoodLibraryController : ControllerBase
     {
-        private FoodLogic _foodLogic;
+        private IFoodLogic _foodLogic;
 
-        private Tag _tag;
-
-        public FoodLibraryController(WFDContext context)
+        public FoodLibraryController(IFoodLogic foodLogic)
         {
-            _foodLogic = new FoodLogic(context);
-            
+            _foodLogic = foodLogic;
+
         }
 
 
